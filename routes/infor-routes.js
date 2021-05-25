@@ -1,5 +1,5 @@
 const express = require("express");
-const { saveInfor } = require("../public/saveinfor");
+const { saveInfor } = require("../public/saveinfor").default;
 const router = express.Router();
 
 router.post("/information", saveInfor);

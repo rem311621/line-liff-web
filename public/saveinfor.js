@@ -1,11 +1,11 @@
-const admin = require("firebase-admin");
-const serviceAccount = require("../test-line-bot-e06b0-firebase-adminsdk-ytkpy-a4ba4deeaa.json");
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
+import { initializeApp, credential as _credential, firestore } from "firebase-admin";
+import serviceAccount from "../test-line-bot-e06b0-firebase-adminsdk-ytkpy-a4ba4deeaa.json";
+initializeApp({
+  credential: _credential.cert(serviceAccount),
 });
-const db = admin.firestore();
+const db = firestore();
 //import db  from("../db");
-const Infor = require("../models/inforModel").default;
+import Infor from "../models/inforModel";
 
 function test() {
   console.log("test");
@@ -26,4 +26,4 @@ const saveInfor = async (req, res, next) => {
   }
 };
 
-module.exports = { saveInfor };
+export default { saveInfor };

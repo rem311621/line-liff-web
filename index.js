@@ -1,12 +1,14 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 const port = process.env.PORT || 5000;
 const myLiffId = process.env.MY_LIFF_ID;
+const inforRoutes = require("./routes/infor-routes");
+app.use(express.static("public"));
 
-app.use(express.static('public'));
+app.use("/api", inforRoutes.routes);
 
-app.get('/send-id', function(req, res) {
-    res.json({id: myLiffId});
+app.get("/send-id", function (req, res) {
+  res.json({ id: myLiffId });
 });
 
 app.listen(port, () => console.log(`app listening on port ${port}!`));

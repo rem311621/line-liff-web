@@ -4,20 +4,21 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIFF Starter</title>
+    <title>填寫基本資料</title>
     <link rel="stylesheet" href="./index.css">
+    <script src="../controller/saveinfor.js"></script>
 </head>
 
 <body>
     <div class="input-content">
-        <input type="text" class="input-place" placeholder="姓名">
+        <input type="text" class="input-place" placeholder="姓名" id="name">
 
-        <input type="text" class="input-place" placeholder="地址">
+        <input type="text" class="input-place" placeholder="地址" id="addr">
 
-        <input type="text" class="input-place" placeholder="電話">
+        <input type="text" class="input-place" placeholder="電話" id="phone">
 
-        <input type="text" class="input-place" placeholder="付款方式">
-        <input type="submit" class="handle-submit" onclick="window.alert(123)">
+        <input type="text" class="input-place" placeholder="付款方式" id="pay">
+        <input type="submit" class="handle-submit" onclick="saveInfor()">
 
     </div>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>

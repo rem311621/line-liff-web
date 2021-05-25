@@ -1,4 +1,10 @@
-import db  from("../db");
+const admin = require("firebase-admin");
+const serviceAccount = require("./test-line-bot-e06b0-firebase-adminsdk-ytkpy-a4ba4deeaa.json");
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+});
+const db = admin.firestore();
+//import db  from("../db");
 const Infor = require("../models/inforModel").default;
 
 function test() {

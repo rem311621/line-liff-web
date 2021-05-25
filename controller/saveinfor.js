@@ -1,6 +1,9 @@
 const db = require("../db");
 const Infor = require("../models/inforModel").default;
 
+function test() {
+  console.log("test");
+}
 const saveInfor = async (req, res, next) => {
   try {
     const name = document.getElementById("name").value;

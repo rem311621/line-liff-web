@@ -10,7 +10,7 @@ const saveInfor = async (req, res, next) => {
     const data = req.body;
     await db
       .collection("Information")
-      .add({ Name: name, addr: addr, phone: phone, paymethod: pay });
+      .add({ Name: 453, addr: 435, phone: 11, paymethod: 22 });
     res.send("Save Success");
   } catch (error) {
     res.status(400).send(error.message);

@@ -1,4 +1,5 @@
 window.onload = function () {
+  const db = require("../db");
   const useNodeJS = true; // if you are not using a node server, set this value to false
   const defaultLiffId = ""; // change the default LIFF value if you are not using a node server
 

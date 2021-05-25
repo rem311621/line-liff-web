@@ -1,5 +1,5 @@
-import { collection } from "../db";
-import Infor from "../models/inforModel";
+const db = require("../db");
+const Infor = require("../models/inforModel").default;
 
 function test() {
   console.log("test");
@@ -11,7 +11,8 @@ const saveInfor = async (req, res, next) => {
     const phone = document.getElementById("phone").value;
     const pay = document.getElementById("pay").value;
     const data = req.body;
-    await collection("Information")
+    await db
+      .collection("Information")
       .add({ Name: 453, addr: 435, phone: 11, paymethod: 22 });
     res.send("Save Success");
   } catch (error) {
@@ -19,4 +20,4 @@ const saveInfor = async (req, res, next) => {
   }
 };
 
-export default { saveInfor };
+module.exports = { saveInfor };

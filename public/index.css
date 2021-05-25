@@ -1,0 +1,45 @@
+:root {
+  --background-color: #060b23;
+  --border-radius: 0.5rem;
+  --border-color: #e1e5ee;
+}
+.input-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body {
+  font-family: "Convergence", sans-serif;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  background-color: var(--background-color);
+  color: azure;
+}
+.input-place {
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-family: inherit;
+  font-size: inherit;
+  color: white;
+  outline: none;
+  padding: 1.25rem;
+  background: none;
+}
+.handle-submit {
+  background: none;
+  color: white;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 1.25rem;
+}
+input:focus {
+  border: 2px solid rgb(0, 140, 255);
+}
+.input-place {
+  margin-top: 1rem;
+}
+.handle-submit {
+  margin-top: 1rem;
+}

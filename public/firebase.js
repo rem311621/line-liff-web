@@ -9,7 +9,7 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 
-var firestore = firebase.firestore;
+var firestore = firebase.firestore();
 const docRef = firestore.doc("inform/inputData");
 const savebtn = document.getElementById("savebtn");
 const input_name = document.getElementById("name").value;

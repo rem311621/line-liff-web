@@ -37,6 +37,10 @@ savebtn.addEventListener("click", function () {
       .then(() => {
         console.log("saved");
         alert("save success");
+        input_name = "";
+        input_addr = "";
+        input_phone = "";
+        input_pay = "";
       })
       .catch((error) => {
         console.log(error);

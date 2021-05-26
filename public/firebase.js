@@ -18,6 +18,7 @@ savebtn.addEventListener("click", function () {
   let input_addr = document.getElementById("addr").value;
   let input_phone = document.getElementById("phone").value;
   let input_pay = document.getElementById("pay").value;
+  let msg = document.getElementById("msg");
   console.log("save", input_name, input_addr, input_phone, input_pay);
   if (
     input_name != "" &&
@@ -39,7 +40,7 @@ savebtn.addEventListener("click", function () {
         document.getElementById("addr").value = "";
         document.getElementById("phone").value = "";
         document.getElementById("pay").value = "";
-        alert("save success");
+        msg.style.display = "block";
       })
       .catch((error) => {
         console.log(error);

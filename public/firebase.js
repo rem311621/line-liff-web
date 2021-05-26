@@ -18,7 +18,7 @@ const input_phone = document.getElementById("phone").value;
 const input_pay = document.getElementById("pay").value;
 
 savebtn.addEventListener("click", function () {
-  console.log("save", inputname);
+  console.log("save", input_name);
   docRef
     .set({
       Name: input_name,

@@ -20,7 +20,8 @@ savebtn.addEventListener("click", function () {
   const input_pay = document.getElementById("pay").value;
   console.log("save", input_name, input_addr, input_phone, input_pay);
   const docRef = firestore.doc("inform/inputData");
-  docRef
+  firestore
+    .collection("Information")
     .add({
       Name: input_name,
       Addr: input_addr,

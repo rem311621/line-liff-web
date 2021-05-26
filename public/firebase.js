@@ -11,11 +11,11 @@ firebase.initializeApp(firebaseConfig);
 
 var firestore = firebase.firestore();
 const docRef = firestore.doc("inform/inputData");
-const savebtn = document.getElementById("savebtn");
-const input_name = document.getElementById("name").value;
-const input_addr = document.getElementById("addr").value;
-const input_phone = document.getElementById("phone").value;
-const input_pay = document.getElementById("pay").value;
+const savebtn = document.querySelector("#savebtn");
+const input_name = document.querySelector("#name").value;
+const input_addr = document.querySelector("#addr").value;
+const input_phone = document.querySelector("#phone").value;
+const input_pay = document.querySelector("#pay").value;
 
 savebtn.addEventListener("click", function () {
   console.log("save", input_name);

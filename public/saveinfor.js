@@ -6,7 +6,7 @@ admin.initializeApp({
 const db = admin.firestore();
 db.settings({ ignoreUndefinedProperties: true });
 //import { collection } from "../db";
-import Infor from "../models/inforModel";
+//import Infor from "../models/inforModel";
 
 function test() {
   console.log("test");

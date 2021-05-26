@@ -20,18 +20,26 @@ savebtn.addEventListener("click", function () {
   const input_pay = document.getElementById("pay").value;
   console.log("save", input_name, input_addr, input_phone, input_pay);
   const docRef = firestore.doc("inform/inputData");
-  firestore
-    .collection("Information")
-    .add({
-      Name: input_name,
-      Addr: input_addr,
-      Phone: input_phone,
-      Pay: input_pay,
-    })
-    .then(() => {
-      console.log("saved");
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+  if (
+    input_name != "" &&
+    input_addr != "" &&
+    input_phone != "" &&
+    input_pay != ""
+  ) {
+    firestore
+      .collection("Information")
+      .add({
+        Name: input_name,
+        Addr: input_addr,
+        Phone: input_phone,
+        Pay: input_pay,
+      })
+      .then(() => {
+        console.log("saved");
+        alert("save success");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 });

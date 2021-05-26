@@ -8,30 +8,29 @@ const firebaseConfig = {
   measurementId: "G-8E8MNE8R9X",
 };
 firebase.initializeApp(firebaseConfig);
-window.onload(function(){
-  
-})
 var firestore = firebase.firestore();
-//const docRef = firestore.doc("inform/inputData");
+console.log(firestore);
+
 const savebtn = document.getElementById("savebtn");
-const input_name = document.getElementById("name").value;
-const input_addr = document.getElementById("addr").value;
-const input_phone = document.getElementById("phone").value;
-const input_pay = document.getElementById("pay").value;
 
 savebtn.addEventListener("click", function () {
-  console.log("save", input_name);
-  // //docRef
-  //   .add({
-  //     Name: input_name,
-  //     Addr: input_addr,
-  //     Phone: input_phone,
-  //     Pay: input_pay,
-  //   })
-  //   .then(() => {
-  //     console.log("saved");
-  //   })
-  //   .catch((error) => {
-  //     console.log(error);
-  //   });
+  const input_name = document.getElementById("name").value;
+  const input_addr = document.getElementById("addr").value;
+  const input_phone = document.getElementById("phone").value;
+  const input_pay = document.getElementById("pay").value;
+  console.log("save", input_name, input_addr, input_phone, input_pay);
+  const docRef = firestore.doc("inform/inputData");
+  docRef
+    .add({
+      Name: input_name,
+      Addr: input_addr,
+      Phone: input_phone,
+      Pay: input_pay,
+    })
+    .then(() => {
+      console.log("saved");
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 });

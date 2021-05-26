@@ -14,12 +14,11 @@ console.log(firestore);
 const savebtn = document.getElementById("savebtn");
 
 savebtn.addEventListener("click", function () {
-  const input_name = document.getElementById("name").value;
-  const input_addr = document.getElementById("addr").value;
-  const input_phone = document.getElementById("phone").value;
-  const input_pay = document.getElementById("pay").value;
+  let input_name = document.getElementById("name").value;
+  let input_addr = document.getElementById("addr").value;
+  let input_phone = document.getElementById("phone").value;
+  let input_pay = document.getElementById("pay").value;
   console.log("save", input_name, input_addr, input_phone, input_pay);
-  const docRef = firestore.doc("inform/inputData");
   if (
     input_name != "" &&
     input_addr != "" &&

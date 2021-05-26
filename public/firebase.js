@@ -35,10 +35,10 @@ savebtn.addEventListener("click", function () {
       })
       .then(() => {
         console.log("saved");
-        input_name = "";
-        input_addr = "";
-        input_phone = "";
-        input_pay = "";
+        document.getElementById("name").value = "";
+        document.getElementById("addr").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("pay").value = "";
         alert("save success");
       })
       .catch((error) => {

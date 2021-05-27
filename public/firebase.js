@@ -1,3 +1,4 @@
+import dotenv from "dotenv";
 const firebaseConfig = {
   apiKey: "AIzaSyD0qxZKGrp3vSXzi_fizdtQDDEMOuO_ySg",
   authDomain: "test-line-bot-e06b0.firebaseapp.com",
